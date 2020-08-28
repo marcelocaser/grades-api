@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: `http://${HOST}:${PORT}`,
+    origin: `http://${process.env.HOST_CORS}:${process.env.PORT_CORS}`,
   })
 );
 app.use(gradeRouter);
